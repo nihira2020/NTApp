@@ -1,0 +1,29 @@
+<form [formGroup]="myform" (ngSubmit)="Savecustomer()">
+    <mat-card>
+        <mat-card-header>
+            <h1>{{pagetitle}}</h1>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field>
+                <mat-label>Code</mat-label>
+                <input matInput formControlName="code"  />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Phone</mat-label>
+                <input matInput formControlName="phone" />
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-footer>
+            <button type="submit" mat-raised-button color="primary">Save</button>
+            <a routerLink="/customer" mat-raised-button color="accent">Close</a>
+        </mat-card-footer>
+    </mat-card>
+</form>
